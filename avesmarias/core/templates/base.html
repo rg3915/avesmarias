@@ -33,14 +33,20 @@
 
 </head>
 <body>
+{% include "nav.html" %}
   <div id="wrap">
     <div class="container">
       <div class="top">
         <img src="{% static 'images/favicon.png' %}">
         <div class="title">Aves Marias</div>
       </div>
+      <div>
+      {% block content %}
+      {% endblock content %}
+
+      </div>
     </div>
   </div>
- <!-- {% include "footer.html" %} -->
+{% include "footer.html" %}
 </body>
 </html>
