@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'daterange_filter',
     'django_extensions',
+    'bootstrapform',
     # my apps
     'avesmarias.core',
 ]

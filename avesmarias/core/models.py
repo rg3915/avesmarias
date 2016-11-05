@@ -48,7 +48,7 @@ class Person(TimeStampedModel, Address):
     cpf = models.CharField('CPF', max_length=11,
                            unique=True, null=True, blank=True)
     blocked = models.BooleanField('bloqueado', default=False)
-    photo = models.ImageField(upload_to='media', null=True, blank=True)
+    photo = models.ImageField('foto', upload_to='media', null=True, blank=True)
 
     class Meta:
         ordering = ['first_name']

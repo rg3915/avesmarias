@@ -6,5 +6,5 @@ class PersonForm(forms.ModelForm):
 
     class Meta:
         model = Person
-        fields = ['first_name', 'last_name', 'email', 'address',
-                  'complement', 'district', 'city', 'uf', 'cep', 'blocked']
+        fields = ['photo', 'first_name', 'last_name',
+                  'email', 'cpf', 'city', 'uf']
