@@ -27,10 +27,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Telefone</th>
-        <th>UF</th>
+        <th>Foto</th>
       </tr>
     </thead>
     <tbody>
@@ -38,23 +35,14 @@
       <tr>
         <td>
           {% if person.photo %}
-            <a class="thumbnail" href="#">
+            <a class="thumbnail" href="{{ person.photo.url }}">
               <img class="img-responsive" style="height:200px" src="{{ person.photo.url }}">
             </a>
           {% endif %}
         </td>
-        <td><a href="{{ person.get_absolute_url }}">{{ person.full_name }}</a></td>
-        <td>{{ person.email }}</td>
-        {% if person.phone_set.first %}
-          <td>{{ person.phone_set.first }} 
-            {% if person.phone_set.count > 1 %}
-              <a href="{{ person.get_absolute_url }}">+{{ person.phone_set.count|add:"-1" }}</a>
-            {% endif %}
-          </td>
-        {% else %}
-          <td>---</td>
-        {% endif %}
-        <td>{{ person.get_uf_display }}</td>
+        <td>
+          
+        </td>
       </tr>
     {% endfor %}
     </tbody>
