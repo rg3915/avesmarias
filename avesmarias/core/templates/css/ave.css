@@ -53,3 +53,32 @@ body .demo-blog {
   vertical-align: center;
   padding: 10px;
 }
+
+.quotes {
+  background-color: white;
+  color: pink;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+  border-radius: 25px;
+  float: left;
+}
+
+.quote {
+  background-color: pink;
+  color: gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+
+.quemsomos {
+  display: inline;
+  background-color: white;
+  color: gray;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  float: right;
+}
