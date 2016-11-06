@@ -36,6 +36,13 @@
     <tbody>
     {% for person in person_list %}
       <tr>
+        <td>
+          {% if person.photo %}
+            <a class="thumbnail" href="#">
+              <img class="img-responsive" src="{{ person.photo.url }}">
+            </a>
+          {% endif %}
+        </td>
         <td><a href="{{ person.get_absolute_url }}">{{ person.full_name }}</a></td>
         <td>{{ person.email }}</td>
         {% if person.phone_set.first %}
