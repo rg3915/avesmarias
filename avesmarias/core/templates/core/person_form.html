@@ -7,20 +7,22 @@
 {% block content %}
 
 <div class="page-header">
-    <h2>Novo Contato</h2>
+    <h2>Registro</h2>
 </div>
 
-<form class="form-horizontal" action="." method="POST">
-  <div class="col-sm-6">
-    {% csrf_token %}
-    {{ form|bootstrap_horizontal }}
-    <div class="form-group">
-      <div class="col-sm-2 col-sm-offset-2">
-        <button type="submit" class="btn btn-primary">Salvar</button>
+  <form class="form-horizontal" action="." method="POST">
+    <div class="col-sm-6">
+      <div class="bkform">
+      {% csrf_token %}
+        {{ form|bootstrap_horizontal }}
+        <div class="form-group">
+          <div class="col-sm-2 col-sm-offset-2">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-</form>
+  </form>
+  <img src="/static/images/logo2.jpg" style="float:right; width: 30%" />
 
 {% endblock content %}
