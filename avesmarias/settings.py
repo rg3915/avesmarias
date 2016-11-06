@@ -128,7 +128,7 @@ DECIMAL_SEPARATOR = ','
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'avesmarias', 'core')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
