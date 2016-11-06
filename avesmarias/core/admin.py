@@ -12,7 +12,8 @@ class PhoneInline(admin.TabularInline):
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
     inlines = [PhoneInline]
-    list_display = ('__str__', 'email', 'phone', 'uf', 'created', 'blocked')
+    list_display = ('id', 'photo_img', '__str__', 'email', 'phone',
+                    'uf', 'created', 'blocked')
     date_hierarchy = 'created'
     search_fields = ('first_name', 'last_name', 'email')
     list_filter = (
@@ -20,6 +21,12 @@ class PersonAdmin(admin.ModelAdmin):
         ('created', DateRangeFilter),
     )
     form = PersonForm
+
+    def photo_img(self, obj):
+        return '<img width="32px" src="{}" />'.format(obj.photo)
+
+    photo_img.allow_tags = True
+    photo_img.short_description = 'foto'
 
     def phone(self, obj):
         return obj.phone_set.first()
